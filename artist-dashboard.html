@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Artist Dashboard - ArtVerse</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>🎨 ArtVerse Artist</h2>
+
+        <div class="nav-links">
+
+            <a href="artist-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <button
+                onclick="logout()"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section class="admin-section">
+
+        <h1>
+            Welcome, <span id="artistName"></span> 🎨
+        </h1>
+
+        <p>
+            Showcase your creativity on ArtVerse.
+        </p>
+
+
+        <!-- ADD ARTWORK -->
+
+        <div class="admin-form">
+
+            <h2>Upload Your Artwork</h2>
+
+            <input
+                type="text"
+                id="artTitle"
+                placeholder="Artwork Title"
+            >
+
+            <textarea
+                id="artDescription"
+                placeholder="Artwork Description"
+            ></textarea>
+
+            <input
+                type="number"
+                id="artPrice"
+                placeholder="Price in ₹"
+            >
+
+            <label>
+                Select Your Artwork
+            </label>
+
+            <input
+                type="file"
+                id="artImage"
+                accept="image/*"
+            >
+
+            <button
+                onclick="addArtwork()"
+                class="btn"
+            >
+                Add Artwork
+            </button>
+
+        </div>
+
+
+        <h2 class="manage-title">
+            My Artworks
+        </h2>
+
+
+        <div
+            id="artistArtworkContainer"
+            class="gallery-grid"
+        ></div>
+
+    </section>
+
+
+    <script src="js/artist.js"></script>
+
+</body>
+
+</html>

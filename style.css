@@ -1,0 +1,779 @@
+/* =====================================================
+   ARTVERSE — PREMIUM DARK ART GALLERY
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b0b0f;
+    color: #f5f5f5;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    padding: 20px 7%;
+    background: rgba(11, 11, 15, 0.94);
+    border-bottom: 1px solid #292933;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+}
+
+.navbar h2 {
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.navbar h2::first-letter {
+    color: #c84cff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #bcbcc5;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d45cff;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 13px 27px;
+    border-radius: 8px;
+    background: linear-gradient(
+        135deg,
+        #8d2cff,
+        #d52cff
+    );
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: 0.3s;
+    box-shadow: 0 8px 25px rgba(180, 45, 255, 0.25);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 35px rgba(190, 50, 255, 0.4);
+}
+
+.logout-btn {
+    border: 1px solid #3b3b48;
+    padding: 9px 18px;
+    border-radius: 7px;
+    background: #16161d;
+    color: #eeeeee;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #252530;
+    border-color: #c84cff;
+    color: #d45cff;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 88vh;
+    padding: 100px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #8d2cff;
+    opacity: 0.08;
+    filter: blur(120px);
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: #ff2cac;
+    opacity: 0.06;
+    filter: blur(120px);
+    border-radius: 50%;
+    bottom: -150px;
+    right: -100px;
+}
+
+.hero-content {
+    max-width: 950px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #ffffff;
+    margin-bottom: 28px;
+}
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #9d35ff,
+        #ff3fb4
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #a7a7b0;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section {
+    padding: 80px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 45px;
+}
+
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background:
+        radial-gradient(
+            circle at top,
+            #21132c,
+            #0b0b0f 55%
+        );
+}
+
+.form-box {
+    width: 100%;
+    max-width: 450px;
+    background: #131319;
+    padding: 42px;
+    border: 1px solid #292934;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+.form-box h1 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.form-box h2 {
+    color: #aaaab4;
+    margin-bottom: 28px;
+    font-size: 20px;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #30303b;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    color: #ffffff;
+    background: #0d0d12;
+    transition: 0.3s;
+}
+
+.form-box input::placeholder,
+.form-box textarea::placeholder {
+    color: #777782;
+}
+
+.form-box input:focus,
+.form-box select:focus,
+.form-box textarea:focus {
+    border-color: #b23cff;
+    box-shadow:
+        0 0 0 3px rgba(178, 60, 255, 0.1);
+}
+
+.form-box p {
+    margin-top: 20px;
+    color: #888892;
+}
+
+.form-box a {
+    color: #d05cff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-box a:hover {
+    color: #ffffff;
+}
+
+.role-label {
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: -5px;
+    font-weight: 600;
+    color: #c65cff;
+}
+
+#message,
+#loginMessage {
+    color: #d45cff;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard,
+.admin-section {
+    padding: 65px 7%;
+}
+
+.dashboard h1,
+.admin-section h1 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.dashboard h1 span {
+    color: #d253ff;
+}
+
+.dashboard > p,
+.admin-section > p {
+    color: #888892;
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   DASHBOARD CARDS
+===================================================== */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.dashboard-card {
+    background: #131319;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #282832;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        #8d2cff,
+        #ff36b8
+    );
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+    border-color: #703090;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.dashboard-card h2 {
+    color: #ffffff;
+    margin-bottom: 14px;
+}
+
+.dashboard-card h3 {
+    font-size: 42px;
+    color: #d451ff;
+}
+
+.dashboard-card p {
+    color: #888892;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section {
+    padding: 65px 7%;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.gallery-subtitle {
+    text-align: center;
+    color: #888892;
+    margin-bottom: 40px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.search-container input {
+    width: min(550px, 90%);
+    padding: 15px 20px;
+    border: 1px solid #30303b;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    color: white;
+    background: #131319;
+}
+
+.search-container input::placeholder {
+    color: #70707a;
+}
+
+.search-container input:focus {
+    border-color: #b33cff;
+}
+
+
+/* =====================================================
+   ARTWORK GRID
+===================================================== */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+    gap: 28px;
+    margin-top: 25px;
+}
+
+
+/* =====================================================
+   ARTWORK CARD
+===================================================== */
+
+.art-card {
+    background: #131319;
+    border: 1px solid #282832;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.art-card:hover {
+    transform: translateY(-8px);
+    border-color: #a338d2;
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+.art-card img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+    background: #18181f;
+    transition: 0.4s;
+}
+
+.art-card:hover img {
+    transform: scale(1.03);
+}
+
+.art-info {
+    padding: 22px;
+}
+
+.art-info h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.art-info p {
+    color: #898993;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.art-info h4 {
+    color: #d353ff;
+    font-size: 19px;
+    margin: 14px 0;
+}
+
+
+/* =====================================================
+   ADMIN / ARTIST FORM
+===================================================== */
+
+.admin-form {
+    max-width: 700px;
+    background: #131319;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #282832;
+    margin-top: 30px;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.admin-form h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.admin-form input,
+.admin-form textarea {
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 16px;
+    border: 1px solid #30303b;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    font-family: inherit;
+    color: #ffffff;
+    background: #0d0d12;
+}
+
+.admin-form input::placeholder,
+.admin-form textarea::placeholder {
+    color: #70707a;
+}
+
+.admin-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+    border-color: #b33cff;
+}
+
+.admin-form input[type="file"] {
+    background: #17171e;
+    cursor: pointer;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 9px;
+    color: #c85cff;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   MANAGE TITLE
+===================================================== */
+
+.manage-title {
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   EDIT / DELETE BUTTONS
+===================================================== */
+
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 9px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #27203b;
+    color: #c996ff;
+    border: 1px solid #49366d;
+}
+
+.edit-btn:hover {
+    background: #372752;
+}
+
+.delete-btn {
+    background: #321c25;
+    color: #ff6f9c;
+    border: 1px solid #633141;
+}
+
+.delete-btn:hover {
+    background: #4b202f;
+}
+
+
+/* =====================================================
+   EMPTY MESSAGE
+===================================================== */
+
+.gallery-grid > p {
+    background: #131319;
+    border: 1px solid #282832;
+    padding: 30px;
+    border-radius: 10px;
+    color: #777782;
+    text-align: center;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #08080b;
+    color: #777782;
+    text-align: center;
+    padding: 30px;
+    margin-top: 70px;
+    border-top: 1px solid #25252e;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 16px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section,
+    .dashboard,
+    .admin-section,
+    .gallery-section {
+        padding: 50px 5%;
+    }
+
+    .dashboard h1,
+    .admin-section h1 {
+        font-size: 32px;
+    }
+
+    .gallery-title {
+        font-size: 38px;
+    }
+
+    .form-box {
+        padding: 32px 22px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .navbar h2 {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .logout-btn {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .admin-buttons {
+        flex-direction: column;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        width: 100%;
+    }
+
+    .art-card img {
+        height: 230px;
+    }
+}

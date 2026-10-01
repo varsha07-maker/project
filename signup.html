@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ArtVerse | Sign Up</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
+
+    <nav class="navbar">
+
+        <h2>ARTVERSE</h2>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==============================
+         SIGNUP SECTION
+    =============================== -->
+
+    <div class="form-container">
+
+        <div class="form-box">
+
+            <h1>Create Account</h1>
+
+            <h2>Join ArtVerse</h2>
+
+
+            <form id="signupForm">
+
+
+                <!-- NAME -->
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                    required
+                >
+
+
+                <!-- EMAIL -->
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+
+                <!-- PASSWORD -->
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required
+                >
+
+
+                <!-- ACCOUNT TYPE -->
+
+                <label class="role-label">
+                    Choose Account Type
+                </label>
+
+                <select id="role" required>
+
+                    <option value="">
+                        Select account type
+                    </option>
+
+                    <option value="user">
+                        Art Lover / User
+                    </option>
+
+                    <option value="artist">
+                        Artist / Admin
+                    </option>
+
+                </select>
+
+
+                <!-- SIGNUP BUTTON -->
+
+                <button
+                    type="submit"
+                    class="btn">
+
+                    Create Account
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <p id="message"></p>
+
+            </form>
+
+
+            <!-- LOGIN LINK -->
+
+            <p>
+                Already have an account?
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    =============================== -->
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

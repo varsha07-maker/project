@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>User Dashboard - ArtVerse</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>🎨 ArtVerse</h2>
+
+        <div class="nav-links">
+
+            <a href="user-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <button
+                onclick="logout()"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section class="dashboard">
+
+        <h1>
+            Welcome, <span id="userName"></span> 👋
+        </h1>
+
+        <p>
+            Explore amazing artwork from talented artists.
+        </p>
+
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <h2>🎨 Explore Gallery</h2>
+
+                <p>
+                    Browse artwork from different artists.
+                </p>
+
+                <a
+                    href="gallery.html"
+                    class="btn"
+                >
+                    View Gallery
+                </a>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h2>🔎 Discover</h2>
+
+                <p>
+                    Search for artwork that interests you.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h2>❤️ Art Lovers</h2>
+
+                <p>
+                    Discover and appreciate creative artwork.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="js/user.js"></script>
+
+</body>
+
+</html>
